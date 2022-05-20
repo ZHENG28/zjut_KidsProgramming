@@ -38,6 +38,10 @@
           >切换</el-button
         >
       </el-col>
+      <el-form-item label="代码">
+        <el-input type="textarea" v-model="code"></el-input>
+        <el-button type="primary" @click="onSubmit">提交代码</el-button>
+      </el-form-item>
     </div>
   </div>
 </template>
@@ -52,6 +56,8 @@ export default {
       activeIndex: "1",
       flag: true,
       imgUrl: "/1.png",
+
+      code: '',
     };
   },
   methods: {
@@ -73,6 +79,17 @@ export default {
           console.log(error);
         });
     },
+    onSubmit() {
+      axios.post('/users/', {
+        code: this.code
+      })
+      .then((resp) => {
+        console.log(resp)
+      })
+      .catch(error =>{
+        console.log(error)
+      })
+    }
   },
 };
 </script>
