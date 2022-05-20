@@ -1,0 +1,13 @@
+{
+	"_element": "en",
+	"_name": "English",
+	"page": {
+		"demo": {
+			"playground": {
+				"locales": {
+					"text": "ZJUT OJ Admin is a modern OnlineJudge management background based on D2admin."
+				}
+			}
+		}
+	}
+}
